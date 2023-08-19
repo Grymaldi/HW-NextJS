@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+#__next {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+main {
+  flex: 1 0 auto;
+  margin: 5px 16px;
+}
+h1{
+    text-align: center;
+}
+footer {
+  flex: 0 0 auto;
+}
