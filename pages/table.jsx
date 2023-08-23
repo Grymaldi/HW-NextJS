@@ -1,9 +1,9 @@
-import ListUsers from "../components/ListUsers";
+import Tab from "../components/Tab";
 
 export default function table() {
   return (
     <>
-      <ListUsers />
+      <Tab />
     </>
   );
 }

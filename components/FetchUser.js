@@ -15,8 +15,9 @@ export default function FetchUser({ id }) {
   useEffect(() => {
     async function start() {
       try {
-        const response =
-          await fetch("https://jsonplaceholder.typicode.com/users" + id);
+        const response = await fetch(
+          "https://jsonplaceholder.typicode.com/users/" + id
+        );
         if (!response.ok) throw new Error("fetch: " + response.status);
         setUser(await response.json());
       } catch (error) {
@@ -27,5 +28,10 @@ export default function FetchUser({ id }) {
   }, [id]);
   if (error) return <div>Ошибка: {error.message}</div>;
 
-  if (user) return <OneUser user={user} />;
+  if (user)
+    return (
+      <>
+        <OneUser user={user} />
+      </>
+    );
 }
