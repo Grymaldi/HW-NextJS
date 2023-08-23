@@ -1,22 +1,22 @@
 import Link from "next/link";
 import css from "./Nav.module.css";
 
-const pages = [
-  { href: "/home", name: "Home" },
-  { href: "/todolist", name: "To Do List" },
-  { href: "/table", name: "Table users" },
-];
-
 export default function Nav() {
   return (
-    <nav className={css.nav}>
-      <ul>
-        {pages.map(({ href, name }) => (
+    <>
+      <nav className={css.nav}>
+        <ul>
           <li>
-            <Link href={href}>{name}</Link>
+            <Link href="/home">Home</Link>
           </li>
-        ))}
-      </ul>
-    </nav>
+          <li>
+            <Link href="/todolist">To Do List</Link>
+          </li>
+          <li>
+            <Link href="/table">Table Users</Link>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 }
